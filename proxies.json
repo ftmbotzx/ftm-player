@@ -1,0 +1,14 @@
+{
+  "proxies": [
+    {
+      "url": "http://example-proxy1.com:8080",
+      "type": "http"
+    },
+    {
+      "url": "socks5://example-proxy2.com:1080",
+      "type": "socks5",
+      "username": "user",
+      "password": "pass"
+    }
+  ]
+}
