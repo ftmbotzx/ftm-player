@@ -36,11 +36,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install Node.js dependencies
 RUN npm install
 
-# Expose port
+# Expose port (optional, only if bot uses a web server)
 EXPOSE 5000
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Command to run the application (will be overridden by docker-compose)
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "main:app"]
+# Run the bot
+CMD ["python", "bot.py"]
